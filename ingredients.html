@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>FoodMood - Ingredients</title>
+
+  <!-- Shared and page-specific CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link 
+    rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+  />
+  <!-- Font Awesome for icons if needed -->
+  <script 
+    src="https://kit.fontawesome.com/a2c9a94ae0.js" 
+    crossorigin="anonymous">
+  </script>
+</head>
+<body class="ingredients-page">
+
+  <!-- ========== NAVBAR (header) ========== -->
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo">
+        <img 
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png" 
+          alt="Logo" 
+        />
+        FoodMood
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="main.html">Back to Home</a>
+     
+    </div>
+    <div class="nav-right">
+      <!-- user profile to toggle dropdown -->
+      <div class="user-profile" id="userProfile">
+        <img 
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png" 
+          alt="Profile" 
+          class="profile-img" 
+          id="userPhoto"
+        />
+        <span id="userName">User</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <!-- dropdown -->
+      <div class="user-dropdown" id="userDropdown">
+        <a href="profile.html">Edit Profile</a>
+        <a href="notification_page.html">Notification</a>
+        <a href="#" id="logoutLink">Log Out</a>
+      </div>
+    </div>
+  </nav>
+  <!-- end main-nav -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <div class="ingredients-container">
+    <div class="ingredients-header">
+      <h2 class="food-name-title" id="foodNameTitle">Food Name</h2>
+      <img 
+        class="food-image" 
+        id="foodImage" 
+        src="photo/default_food.png" 
+        alt="Food Image" 
+      />
+      <p class="food-description" id="foodDesc"></p>
+    </div>
+
+    <!-- Ingredients listed here -->
+    <div class="ingredients-list" id="ingredientsList">
+      <!-- JS populates .ingredient-card items here -->
+    </div>
+
+    <!-- Buttons row: Back and Mark as Eaten -->
+    <div class="ingredients-buttons">
+      <button id="backBtn" class="back-btn">Back</button>
+      <button id="markEatenBtn" class="mark-eaten-btn">Mark as Eaten</button>
+    </div>
+
+    
+
+    <!-- ===== Success message (hidden by default) ===== -->
+    <div id="markEatenSuccess" class="success-message" style="display: none;">
+      <p>Thank you! Your food is now marked as eaten.</p>
+    </div>
+    
+    <!-- NEW: Confetti wrapper for dynamic pieces -->
+    <div class="confetti-wrapper" id="confettiWrapper"></div>
+    
+  </div> 
+  <!-- .ingredients-container -->
+
+  <!-- UNIVERSAL FOOTER SNIPPET -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+          alt="FoodMood Logo"
+        />
+        <h2>FOODMOOD</h2>
+        <p>
+          Eat well, feel well. Track how your favorite foods impact your mood!
+        </p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="add_mood.html">AddMood</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FOODMOOD. All rights reserved. Made with <span>FOODMOOD TEAM</span></p>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script type="module" src="firebaseConfig.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

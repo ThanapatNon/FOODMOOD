@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OTP Verification - FOODMOOD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<h1>FOODMOOD login</h1>
+<body class="otp-page login-page">
+  <div class="login-container">
+    <h2>Verify OTP</h2>
+    <p id="phoneDisplay"></p>
+
+    <div class="login-input-group">
+      <span class="input-icon"><i class="fas fa-key"></i></span>
+      <input id="otpCode" type="number" placeholder="6-digit code" required />
+    </div>
+
+    <button id="verifyOtpBtn" class="login-btn">Verify</button>
+
+    <p class="login-signup-text">
+      <a href="phone-login.html">Go back to Phone Login</a>
+    </p>
+  </div>
+
+  <!-- Import script.js so it can confirm the code using confirmationResult -->
+  <script type="module" src="script.js"></script>
+  <script type="module" src="firebaseConfig.js"></script>
+</body>
+</html>

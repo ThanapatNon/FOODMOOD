@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FOODMOOD - About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Reuse your main stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Fonts & Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+</head>
+<body class="about-page">
+  <!-- ====== HEADER (matching main.html) ====== -->
+  <header class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo">
+        <img
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+          alt="FoodMood Logo"
+        />
+        <span>FOODMOOD</span>
+      </a>
+    </div>
+    <nav class="nav-center">
+      <a href="main.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="our_menu.html">OurMenu</a>
+    
+    </nav>
+    <div class="nav-right">
+      <div class="user-profile" id="userProfile">
+        <img id="userPhoto" src="photo/default-profile.png" alt="Profile Photo" class="profile-img" />
+        <span id="userName">Loading...</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="user-dropdown" id="userDropdown">
+        <a href="profile.html">Edit Profile</a>
+        <a href="notification_page.html">Notification</a>
+        <a href="#" id="logoutLink">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section class="about-hero">
+    <img src="photo/11-1.jpg" alt="MAHIDOL" />
+    <div class="about-hero-text">
+      <h1>About FoodMood</h1>
+      <p>Learn more about our story &amp; the team behind it</p>
+    </div>
+  </section>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main>
+    <!-- Intro / Mission -->
+    <section class="about-intro">
+      <div class="about-intro-container">
+        <h2>Our Mission</h2>
+        <p>
+          At FOODMOOD, we believe that the right food choices can make a huge difference
+          in how we feel. Our mission is to empower everyone with the knowledge and
+          tools to track, understand, and improve their mood through food.
+        </p>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team-section">
+      <h2>Meet the Team</h2>
+      <div class="team-cards">
+        <div class="team-card">
+          <img src="photo/S__54034442.jpg" alt="Team Member Ja" />
+          <h3>MR. JIRARUCH TANTIYAVARONG</h3>
+          <p class="role">Student ID: 6488100</p>
+          <p class="description">
+            BACHELOR OF SCIENCE (INFORMATION AND COMMUNICATION TECHNOLOGY)
+          </p>
+        </div>
+        <div class="team-card">
+          <img src="photo/S__436150275.jpg" alt="Team Member Tar" />
+          <h3>MR. THANAPAT NONPASSOPON</h3>
+          <p class="role">Student ID: 6488128</p>
+          <p class="description">
+            BACHELOR OF SCIENCE (INFORMATION AND COMMUNICATION TECHNOLOGY)
+          </p>
+        </div>
+        <div class="team-card">
+          <img src="photo/S__9265216.jpg" alt="Team Member Tanny" />
+          <h3>MR. WITHSARUT WUTTHISATHIAN</h3>
+          <p class="role">Student ID: 6488113</p>
+          <p class="description">
+            BACHELOR OF SCIENCE (INFORMATION AND COMMUNICATION TECHNOLOGY)
+          </p>
+        </div>
+        <div class="team-card">
+          <img src="photo/messageImage_1737354296860.jpg" alt="Team Member Advisor" />
+          <h3>Dr. Pawitra Liamruk</h3>
+          <p class="role">Advisor</p>
+          <p class="description">
+            BACHELOR OF SCIENCE (INFORMATION AND COMMUNICATION TECHNOLOGY)
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER (matching main.html) ====== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+          alt="FoodMood Logo"
+        />
+        <h2>FOODMOOD</h2>
+        <p>
+          Eat well, feel well. Track how your favorite foods impact your mood!
+        </p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="add_mood.html">AddMood</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FOODMOOD. All rights reserved. Made with <span>FOODMOOD TEAM</span></p>
+    </div>
+  </footer>
+
+  <!-- If you want the same JS from main (to handle user dropdown, etc.) -->
+  <script type="module" src="firebaseConfig.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

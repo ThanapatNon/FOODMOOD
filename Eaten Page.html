@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eaten Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="eaten-page">
+  <header class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo">
+        <img src="photo/foodmood_logo_icon_copy-removebg-preview.png" alt="Logo">
+        FoodMood
+      </a>
+    </div>
+    <div class="nav-center">
+      <!-- <a href="main.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="our_menu.html">Our Menu</a> -->
+     
+    </div>
+    <div class="nav-right">
+      <div class="user-profile" id="userProfile">
+        <img src="photo/default-profile.png" alt="Profile" class="profile-img" id="userPhoto" />
+        <span id="userName">User</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="user-dropdown" id="userDropdown">
+        <a href="profile.html">Edit Profile</a>
+        <a href="notification_page.html">Notification</a>
+        <a href="#" id="logoutLink">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="eaten-container">
+      <h2>Food Eaten</h2>
+
+      <img 
+        id="foodImage"
+        src="https://via.placeholder.com/300x200?text=Delicious+Meal" 
+        alt="Food Eaten" 
+        class="eaten-food-image"
+      >
+      <h3 id="foodName">Sample Food Name</h3>
+
+      <p class="feeling-question">How do you feel after eating this?</p>
+
+      <!-- NEW FEELING BUTTONS -->
+      <div class="feeling-buttons">
+        <button id="happyBtn"  class="feeling-btn happy">Happy</button>
+        <button id="sadBtn"    class="feeling-btn sad">Sad</button>
+        <button id="angryBtn"  class="feeling-btn angry">Angry</button>
+        <button id="neutralBtn"class="feeling-btn neutral">Neutral</button>
+      </div>
+
+      <p id="feedbackMessage" class="feedback-message"></p>
+
+      <!-- Confetti Wrapper (if you have a confetti effect) -->
+      <div class="confetti-wrapper" id="confettiWrapper"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- (Your existing footer content) -->
+      <div class="footer-logo">
+        <img
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+          alt="FoodMood Logo"
+        />
+        <h2>FOODMOOD</h2>
+        <p>Eat well, feel well. Track how your favorite foods impact your mood!</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="add_mood.html">AddMood</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FOODMOOD. All rights reserved. Made with <span>FOODMOOD TEAM</span></p>
+    </div>
+  </footer>
+
+  <!-- Firebase + Main Script -->
+  <script type="module" src="firebaseConfig.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

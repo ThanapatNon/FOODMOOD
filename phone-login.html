@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Phone Login - FOODMOOD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="phone-login-page login-page">
+  <div class="login-container">
+    <h2>Phone Login</h2>
+    <p>Please enter your phone number:</p>
+
+    <div class="login-input-group">
+      <span class="input-icon"><i class="fas fa-phone"></i></span>
+      <input id="phoneNumber" type="tel" placeholder="+66 999999999" required />
+    </div>
+
+    <button id="sendOtpBtn" class="login-btn">Send OTP</button>
+
+    <!-- reCAPTCHA container (invisible) -->
+    <div id="recaptcha-container" style="display: none;"></div>
+
+    <p class="login-signup-text">
+      <a href="login.html"><< Back to Use my Email Instead</a>
+    </p>
+  </div>
+
+  <!-- Import your updated script.js -->
+  <script type="module" src="script.js"></script>
+  <script type="module" src="firebaseConfig.js"></script>
+</body>
+</html>

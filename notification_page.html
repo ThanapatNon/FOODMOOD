@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FOODMOOD - Notification</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Firebase SDK -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- FontAwesome Icons (Optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body class="notification-page">
+  <header class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo">
+        <img
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+          alt="FoodMood Logo"
+        />
+        <span>FOODMOOD</span>
+      </a>
+    </div>
+    <nav class="nav-center">
+      <h3>FOODMOOD NOTIFICATION</h3>
+     
+    </nav>
+    <div class="nav-right">
+      <div class="user-profile" id="userProfile">
+        <img id="userPhoto" src="photo/default-profile.png" alt="Profile Photo" class="profile-img" />
+        <span id="userName">Loading...</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="user-dropdown" id="userDropdown">
+        <a href="profile.html">Edit Profile</a>
+        <a href="notification_page.html">Notification</a>
+        <a href="#" id="logoutLink">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!--=============BACK BUTTON=================-->
+  <div class="back-button-container">
+    <a href="main.html" class="back-button">
+      <i class="fas fa-arrow-left"></i>
+      Back 
+    </a>
+  </div>
+  <!--=========================================-->
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <div class="notification-container">
+      <h2>Set Up Your Email Reminder</h2>
+      <p>Enter your email and choose the exact date/time you'd like a reminder.</p>
+
+      <form id="notifyForm">
+        <div class="form-group email-row">
+          <label for="emailInput">Email Address</label>
+          <div class="email-field">
+            <input
+              type="email"
+              id="emailInput"
+              name="email"
+              placeholder="example@domain.com"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="datetimeInput">Remind Me On</label>
+          <input
+            type="datetime-local"
+            id="datetimeInput"
+            name="datetime"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="freqInput">Frequency</label>
+          <select id="freqInput" name="frequency" required>
+            <option value="once">One Time</option>
+            <option value="daily">Every Day</option>
+            <option value="3days">Every 3 Days</option>
+            <option value="5days">Every 5 Days</option>
+            <option value="weekly">Every Week</option>
+            <option value="monthly">Every Month</option>
+          </select>
+        </div>
+
+        <button type="submit" class="notify-btn">Schedule Reminder</button>
+      </form>
+
+      <div id="feedbackMessage" class="feedback-message"></div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+          alt="FoodMood Logo"
+        />
+        <h2>FOODMOOD</h2>
+        <p>Eat well, feel well. Track how your favorite foods impact your mood!</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="add_mood.html">AddMood</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FOODMOOD. All rights reserved. Made with <span>FOODMOOD TEAM</span></p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FOODMOOD - Our Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+</head>
+<body class="main-page menu-page">
+  <header class="main-nav">
+    <!-- universal header snippet -->
+    <div class="nav-left">
+      <a href="home.html" class="logo">
+        <img src="photo/foodmood_logo_icon_copy-removebg-preview.png" alt="FoodMood Logo" />
+        <span>FOODMOOD</span>
+      </a>
+    </div>
+    <nav class="nav-center">
+      <a href="main.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="our_menu.html">OurMenu</a>
+    
+    </nav>
+    <div class="nav-right">
+      <div class="user-profile" id="userProfile">
+        <img id="userPhoto" src="photo/default-profile.png" alt="Profile" class="profile-img" />
+        <span id="userName">Loading...</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="user-dropdown" id="userDropdown">
+        <a href="profile.html">Edit Profile</a>
+        <a href="notification_page.html">Notification</a>
+        <a href="#" id="logoutLink">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="menu-container">
+      <h2>Our Menu</h2>
+      <h4>You will get the suggestions list from this set of our menu.</h4>
+      <p>Discover popular dishes from our database!</p>
+      <div class="menu-search">
+        <input type="text" id="menuSearchInput" placeholder="Search food..." />
+        <i class="fas fa-search search-icon"></i>
+      </div>
+      <div class="menu-cards-row" id="menuCardsRow">
+        <!-- JS inserts menu cards -->
+      </div>
+    </div>
+  </main>
+
+  <!-- UNIVERSAL FOOTER SNIPPET -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img
+        src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+        alt="FoodMood Logo"
+      />
+      <h2>FOODMOOD</h2>
+      <p>
+        Eat well, feel well. Track how your favorite foods impact your mood!
+      </p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="add_mood.html">AddMood</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 FOODMOOD. All rights reserved. Made with <span>FOODMOOD TEAM</span></p>
+  </div>
+</footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

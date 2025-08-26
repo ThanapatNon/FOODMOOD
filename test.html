@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Phone Auth Test</title>
+  </head>
+  <body>
+    <h1>Phone Auth Test Using firebaseConfig.js</h1>
+
+    <!-- Where the invisible reCAPTCHA will go -->
+    <div id="recaptcha-container"></div>
+
+    <!-- A button to trigger sending the OTP -->
+    <button id="sendOtpBtn">Send OTP</button>
+
+    <!-- Use type="module" so we can import from firebaseConfig.js -->
+    <script type="module">
+      // 1) Import only what we need from Firebase's auth library
+      import {
+        RecaptchaVerifier,
+        signInWithPhoneNumber
+      } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
+
+      // 2) Import the "auth" instance from your firebaseConfig.js
+      import { auth } from './firebaseConfig.js';
+
+      // 3) Hook up "Send OTP" button
+      document.getElementById("sendOtpBtn").addEventListener("click", () => {
+        // Create an invisible reCAPTCHA widget
+        window.recaptchaVerifier = new RecaptchaVerifier(
+          "recaptcha-container",
+          { size: "invisible" },
+          auth
+        );
+
+        // E.164 format phone number example
+        const testPhone = "+66935916222"; // Replace with a valid #
+
+        signInWithPhoneNumber(auth, testPhone, window.recaptchaVerifier)
+          .then((confirmationResult) => {
+            console.log("OTP sent. confirmationResult:", confirmationResult);
+          })
+          .catch((err) => {
+            console.error("Error sending OTP:", err);
+          });
+      });
+    </script>
+  </body>
+</html>

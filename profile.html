@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profile - FOODMOOD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Your shared styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- FontAwesome, etc. -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+</head>
+
+<body class="profile-page">
+
+  <!-- UNIVERSAL HEADER -->
+  <header class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo">
+        <img
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+          alt="FoodMood Logo"
+        />
+        <span>FOODMOOD</span>
+      </a>
+    </div>
+    <nav class="nav-center">
+      <h3>EDIT MY PROFILE</h3>>
+   
+    </nav>
+    <div class="nav-right">
+      <!-- user profile / dropdown -->
+      <div class="user-profile" id="userProfile">
+        <img
+          id="userPhoto"
+          src="photo/default-profile.png"
+          alt="Profile Photo"
+          class="profile-img"
+        />
+        <span id="userName">Loading...</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="user-dropdown" id="userDropdown">
+        <a href="profile.html">Edit Profile</a>
+        <a href="notification_page.html">Notification</a>
+        <a href="#" id="logoutLink">Log Out</a>
+      </div>
+    </div>
+  </header>
+  <!-- END UNIVERSAL HEADER -->
+
+  <!-- Optional: back arrow to main.html or wherever -->
+  <a href="main.html" class="profile-back-arrow">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+
+
+  <div class="back-button-container">
+    <a href="main.html" class="back-button">
+      <i class="fas fa-arrow-left"></i>
+      Back 
+    </a>
+  </div>
+
+  <div class="profile-container">
+    <div class="profile-header">
+      <h2>My Personal Information</h2>
+      <p>View and update your personal information</p>
+    </div>
+
+    <!-- The form has 14 allergies, plus weight, height, birthday, gender, occupation, blood type -->
+    <form id="profileForm" class="profile-form">
+      <!-- ALLERGIES -->
+      <div class="profile-row">
+        <div class="profile-field" style="flex: 1 1 100%;">
+          <label class="profile-label">Allergies (check all that apply):</label>
+          <div class="allergy-checkboxes">
+            <!-- your 14 checkboxes -->
+            <div>
+              <input type="checkbox" id="allergy-0" value="Celery" />
+              <label for="allergy-0">Celery</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="allergy-1"
+                value="Cereals containing gluten"
+              />
+              <label for="allergy-1">Cereals containing gluten</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-2" value="Crustaceans" />
+              <label for="allergy-2">Crustaceans</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-3" value="Eggs" />
+              <label for="allergy-3">Eggs</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-4" value="Fish" />
+              <label for="allergy-4">Fish</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-5" value="Lupin" />
+              <label for="allergy-5">Lupin</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-6" value="Milk" />
+              <label for="allergy-6">Milk</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-7" value="Molluscs" />
+              <label for="allergy-7">Molluscs</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-8" value="Mustard" />
+              <label for="allergy-8">Mustard</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-9" value="Peanuts" />
+              <label for="allergy-9">Peanuts</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-10" value="Sesame" />
+              <label for="allergy-10">Sesame</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-11" value="Soy" />
+              <label for="allergy-11">Soy</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="allergy-12"
+                value="Sulphur dioxide/sulphites"
+              />
+              <label for="allergy-12">Sulphur dioxide/sulphites</label>
+            </div>
+            <div>
+              <input type="checkbox" id="allergy-13" value="Tree nuts" />
+              <label for="allergy-13">Tree nuts</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIRTHDAY & GENDER ROW -->
+      <div class="profile-row">
+        <div class="profile-field">
+          <label for="birthday" class="profile-label">Birthday</label>
+          <input type="date" id="birthday" />
+        </div>
+
+        <div class="profile-field">
+          <label for="weight" class="profile-label">Weight (kg)</label>
+          <input
+            type="number"
+            id="weight"
+            min="1"
+            max="300"
+            placeholder="1 - 300"
+          />
+        </div>
+
+        <div class="profile-field">
+          <label for="height" class="profile-label">Height (cm)</label>
+          <input
+            type="number"
+            id="height"
+            min="1"
+            max="300"
+            placeholder="1 - 300"
+          />
+        </div>
+      </div>
+
+      <!-- BLOOD TYPE ROW -->
+      <div class="profile-row">
+        <div class="profile-field">
+          <label for="bloodType" class="profile-label">Blood Type</label>
+          <select id="bloodType">
+            <option value="" disabled>Select your blood type</option>
+            <option value="A">A</option>
+    
+            <option value="B">B</option>
+            
+            <option value="AB">AB</option>
+            
+            <option value="O">O</option>
+          
+            
+          </select>
+        </div>
+      </div>
+
+      <div class="profile-row" style="margin-top: 30px;">
+        <button type="submit" class="profile-btn">Save Changes</button>
+        <button type="button" class="profile-delete-btn" id="deleteAccountBtn">
+          Delete Account
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- UNIVERSAL FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+          alt="FoodMood Logo"
+        />
+        <h2>FOODMOOD</h2>
+        <p>Eat well, feel well. Track how your favorite foods impact your mood!</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <a href="main.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="our_menu.html">OurMenu</a>
+          <a href="mood_cards.html">MoodHistory</a>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FOODMOOD. All rights reserved. Made with <span>FOODMOOD TEAM</span></p>
+    </div>
+  </footer>
+  <!-- END UNIVERSAL FOOTER -->
+
+  <!-- SCRIPTS -->
+  <script type="module" src="firebaseConfig.js"></script>
+  <script type="module" src="script.js"></script>
+  <!-- Restrict future birthdays (optional) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const profileForm = document.getElementById("profileForm");
+      if (profileForm) {
+        profileForm.addEventListener("submit", async (evt) => {
+          evt.preventDefault(); // Stop the form from reloading the page
+    
+          // Here you can do your "save changes" logic from script.js,
+          // or call a function in script.js that does it for you.
+    
+          // After saving, run fetch_data.py
+          if (window.runFetchData) {
+            await window.runFetchData();
+          }
+    
+          alert("Your Profile Updated");
+        });
+      }
+    
+      const deleteBtn = document.getElementById("deleteAccountBtn");
+      if (deleteBtn) {
+        deleteBtn.addEventListener("click", async () => {
+          // Possibly confirm with the user, then call script.js function 
+          // that deletes from Firestore + Firebase Auth
+    
+          // Then run fetch_data.py
+          if (window.runFetchData) {
+            await window.runFetchData();
+          }
+    
+          alert("Account deleted + MySQL synced!");
+          window.location.href = "login.html";
+        });
+      }
+    });
+    </script>
+</body>
+</html>

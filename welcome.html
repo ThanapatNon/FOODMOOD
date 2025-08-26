@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to FOODMOOD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+</head>
+<body class="welcome-page">
+  <div class="welcome-container">
+    <div class="welcome-image-section">
+      <img
+        src="photo/beautiful-romantic-composition-breakfast-with-presents.jpg"
+        alt="Delicious Food"
+      />
+    </div>
+    <div class="welcome-info-section">
+      <img
+        src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+        alt="FoodMood Logo"
+        class="welcome-brand-logo"
+      />
+      <div class="welcome-profile-pic">
+        <img
+          id="welcomePhoto"
+          src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+          alt="Profile Photo"
+        />
+      </div>
+      <h3 id="welcomeName">User Name</h3>
+      <p id="welcomeEmail">user@domain.com</p>
+      <p id="welcomeDetails">All user details here</p>
+
+      <h2>Welcome to FOODMOOD !!</h2>
+      <p class="welcome-subtext">
+        Get started enjoying mood tracking and discover
+        our algorithm’s food suggestions based on your mood.
+      </p>
+      <button class="welcome-btn" id="welcomeStartBtn">Get Start !!</button>
+    </div>
+  </div>
+
+  <!--
+    NOTE: We assume your script.js has a function window.runFetchData()
+    that does 'fetch("http://127.0.0.1:3000/run-fetch-data",{method:"POST"})'
+  -->
+  <script type="module" src="firebaseConfig.js"></script>
+  <script type="module" src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const welcomeBtn = document.getElementById("welcomeStartBtn");
+      if (welcomeBtn) {
+        welcomeBtn.addEventListener("click", async () => {
+          // 1) Attempt to run fetch_data
+          if (window.runFetchData) {
+            await window.runFetchData();
+          }
+          // 2) Then proceed to main page
+          window.location.href = "main.html";
+        });
+      }
+    });
+    </script>
+</body>
+</html>

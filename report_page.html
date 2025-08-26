@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FOODMOOD Report</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Chart.js (global) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+  <!-- jsPDF UMD Build (global) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="report-page">
+
+  <!-- HEADER (unchanged) -->
+  <header class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo">
+        <img src="photo/foodmood_logo_icon_copy-removebg-preview.png" alt="FoodMood Logo"/>
+        <span>FOODMOOD</span>
+      </a>
+    </div>
+    <nav class="nav-center">
+      <h3>FOODMOOD REPORT</h3>>
+    </nav>
+    <div class="nav-right">
+      <div class="user-profile" id="userProfile">
+        <img id="userPhoto" src="photo/default-profile.png" alt="Profile" class="profile-img"/>
+        <span id="userName">Loading...</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="user-dropdown" id="userDropdown">
+        <a href="profile.html">Edit Profile</a>
+        <a href="notification_page.html">Notification</a>
+        <a href="#" id="logoutLink">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="back-button-container">
+    <a href="main.html" class="back-button">
+      <i class="fas fa-arrow-left"></i>
+      Back 
+    </a>
+  </div>
+
+  <!-- MAIN REPORT CONTENT -->
+  <div class="report-container">
+    <h1>FOODMOOD Report</h1>
+
+    <!-- Date Range Buttons -->
+    <div class="date-range">
+      <button id="range7Btn">Last 7 Days</button>
+      <button id="range30Btn">Last 30 Days</button>
+    </div>
+
+    <!-- Consumed Meals Table -->
+    <div class="history-table-container">
+      <h2>Consumed Meals</h2>
+      <table id="historyTable">
+        <thead>
+          <tr>
+            <th>Food Image</th>
+            <th>Food Name</th>
+            <th>Date/Time</th>
+            <th>Mood Before</th>
+            <th>Mood After</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Populated by script.js -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Overlapping Mood Chart -->
+    <h2>Mood Chart</h2>
+    <canvas id="moodCompareChart" width="400" height="200"></canvas>
+
+
+
+    <!-- Download PDF Button -->
+    <button class="report-pdf-btn" id="downloadPdfBtn">Download PDF Report</button>
+  </div>
+
+  <!-- FOOTER (unchanged) -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="photo/foodmood_logo_icon_copy-removebg-preview.png" alt="FoodMood Logo"/>
+        <h2>FOODMOOD</h2>
+        <p>Eat well, feel well. Track how your favorite foods impact your mood!</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="add_mood.html">Add Mood</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FOODMOOD. All rights reserved. Made with <span>FOODMOOD TEAM</span></p>
+    </div>
+  </footer>
+
+  <!-- Main script -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

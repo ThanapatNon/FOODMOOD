@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register Step 2 - FOODMOOD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+</head>
+<body class="register2-page">
+  <!-- Back arrow to register.html -->
+  <a href="register.html" class="register2-back-arrow">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+
+  <div class="login-container">
+    <div class="login-logo">
+      <img
+        src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+        alt="FoodMood Logo"
+      />
+      <h2>FOODMOOD</h2>
+      <p>Personal Health Data</p>
+    </div>
+
+    <!-- The form calls 'saveHealthData()' from register2.js onsubmit -->
+    <form onsubmit="event.preventDefault(); saveHealthData();">
+      <!-- 14 Allergies -->
+      <div class="login-input-group">
+        <label>Allergies (check all that apply):</label>
+        <div class="allergy-checkboxes">
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-0" value="Celery" />
+            <label for="allergy-0">Celery</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-1" value="Cereals containing gluten" />
+            <label for="allergy-1">Cereals containing gluten</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-2" value="Crustaceans" />
+            <label for="allergy-2">Crustaceans</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-3" value="Eggs" />
+            <label for="allergy-3">Eggs</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-4" value="Fish" />
+            <label for="allergy-4">Fish</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-5" value="Lupin" />
+            <label for="allergy-5">Lupin</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-6" value="Milk" />
+            <label for="allergy-6">Milk</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-7" value="Molluscs" />
+            <label for="allergy-7">Molluscs</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-8" value="Mustard" />
+            <label for="allergy-8">Mustard</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-9" value="Peanuts" />
+            <label for="allergy-9">Peanuts</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-10" value="Sesame" />
+            <label for="allergy-10">Sesame</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-11" value="Soy" />
+            <label for="allergy-11">Soy</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-12" value="Sulphur dioxide/sulphites" />
+            <label for="allergy-12">Sulphur dioxide/sulphites</label>
+          </div>
+          <div class="allergy-item">
+            <input type="checkbox" id="allergy-13" value="Tree nuts" />
+            <label for="allergy-13">Tree nuts</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weight -->
+      <div class="login-input-group">
+        <label for="weight">Weight (kg)</label>
+        <input id="weight" type="number" placeholder="1-300" min="1" max="300" />
+      </div>
+
+      <!-- Height -->
+      <div class="login-input-group">
+        <label for="height">Height (cm)</label>
+        <input id="height" type="number" placeholder="1-300" min="1" max="300" />
+      </div>
+
+      <!-- Birthday -->
+      <div class="login-input-group">
+        <label for="birthday">Birthday</label>
+        <input id="birthday" type="date" />
+      </div>
+
+
+      <!-- Blood Type -->
+      <div class="login-input-group">
+        <label for="bloodType">Blood Type</label>
+        <select id="bloodType">
+          <option value="">Select your blood type</option>
+          
+          <option value="A">A</option>
+         
+          <option value="B">B</option>
+        
+          <option value="AB">AB</option>
+         
+          <option value="O">O</option>
+       
+        </select>
+      </div>
+
+      <button type="submit" class="login-btn">Save &amp; Next</button>
+    </form>
+  </div>
+
+  <!-- Firebase & register2.js -->
+  <script type="module" src="firebaseConfig.js"></script>
+  <script type="module" src="script.js"></script>
+
+  <!-- Restrict future birthday -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const birthdayInput = document.getElementById('birthday');
+      const today = new Date().toISOString().split('T')[0];
+      birthdayInput.setAttribute('max', today);
+    });
+  </script>
+</body>
+</html>

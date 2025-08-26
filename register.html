@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - FOODMOOD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+</head>
+<body class="register-page">
+  <a href="login.html" class="register-back-arrow">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+
+  <div class="login-container">
+    <div class="login-logo">
+      <img
+        src="photo/foodmood_logo_icon_copy-removebg-preview.png"
+        alt="FoodMood Logo"
+      />
+      <h2>FOODMOOD</h2>
+      <p>Create your account!</p>
+    </div>
+
+    <form id="register-form">
+      <div class="login-input-group">
+        <span class="input-icon"><i class="fas fa-user"></i></span>
+        <input id="fullname" type="text" placeholder="Full Name" required />
+      </div>
+      <div class="login-input-group">
+        <span class="input-icon"><i class="fas fa-envelope"></i></span>
+        <input id="email" type="email" placeholder="Email" required />
+      </div>
+      <div class="login-input-group">
+        <span class="input-icon"><i class="fas fa-lock"></i></span>
+        <input id="password" type="password" placeholder="Password" required />
+      </div>
+      <div class="login-input-group">
+        <span class="input-icon"><i class="fas fa-lock"></i></span>
+        <input id="confirm-password" type="password" placeholder="Confirm Password" required />
+      </div>
+      <button type="submit" class="login-btn">Sign Up</button>
+      <p class="login-signup-text">
+        Already have an account?
+        <a href="login.html" id="signin-link">Sign In</a>
+      </p>
+    </form>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
