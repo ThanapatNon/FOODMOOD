@@ -23,6 +23,6 @@ FOODMOOD is a full-stack web application that helps users track their daily mood
 ---
 
 ## 📜 License  
-Copyright (c) 2025 FOODMOOD TEAM
+Copyright (c) 2025 THANAPAT NONPASSOPON
 
-These web application created by FOODMOOD Team and not allowed to use in commercial.
+These web application created by Thanapat Nonpassopon and not allowed to use in commercial.
