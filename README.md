@@ -19,3 +19,10 @@ FOODMOOD is a full-stack web application that helps users track their daily mood
 - **Backend:** Flask (Python)  
 - **Database:** MySQL  
 - **Other Tools:** SMTP (email notifications), Chart.js, ReportLab (PDF export)  
+
+--
+
+## 📜 License  
+Copyright (c) 2025 FOODMOOD TEAM
+
+These web application created by FOODMOOD Team and not allowed to use in commercial.
