@@ -20,7 +20,7 @@ FOODMOOD is a full-stack web application that helps users track their daily mood
 - **Database:** MySQL  
 - **Other Tools:** SMTP (email notifications), Chart.js, ReportLab (PDF export)  
 
---
+---
 
 ## 📜 License  
 Copyright (c) 2025 FOODMOOD TEAM
